@@ -1,0 +1,77 @@
+<template>
+    <header>
+        <img src="resources/lwc.png" alt="App logo">
+        <h2>Customer Service Application</h2>
+    </header>
+
+    <!-- Page code -->
+    <main class="content">
+        
+            <!--<input type="search" placeholder="Search contacts..."
+                    oninput={searchdata} />-->
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th scope="col">
+                            <div class="slds-truncate">
+                                <input type="checkbox"></input>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Name">Case Number</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Subject">Subject</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Status">Status</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Priority">Priority</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Created Date">Created Date</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Closed Date">Closed Date</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={cases} for:item="cs">
+                        
+                            <tr key={cs.id}>
+                                    <th scope="col">
+                                        <div>
+                                            <input type="checkbox" value={cs.CaseNumber} data-id={cs.id}></input>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>{cs.CaseNumber}</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>{cs.Subject}</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>{cs.Status}</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>{cs.Priority}</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>{cs.CreatedDate}</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>{cs.ClosedDate}</div>
+                                    </th>
+                                </tr>
+
+
+                    </template>
+                </tbody>
+            </table>
+
+       
+    </main>
+</template>
